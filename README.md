@@ -1,176 +1,204 @@
-# **FinanceFlow**
+# FinanceFlow
 
-## **Overview**
-
+## Overview
 FinanceFlow is a **comprehensive personal finance management platform** designed to help users **track income, expenses, savings, and financial goals**. It provides an intuitive interface to manage finances, analyze spending patterns, and make informed financial decisions.
 
 The platform allows users to **log transactions, categorize expenses, set budgets, track savings goals, and generate financial reports**. FinanceFlow ensures a seamless user experience by prioritizing **security, efficiency, and scalability** while keeping financial data organized and accessible across devices.
 
----
-
-## **Aim & Goal**
-
-The primary goal of FinanceFlow is to **empower individuals and businesses with an easy-to-use financial tracking system** that enhances financial literacy and encourages better money management.
-
-FinanceFlow is designed for:
-- **Individuals** who want to track their personal finances effortlessly.
-- **Freelancers** and **entrepreneurs** who need a structured approach to managing business transactions.
-- **Small businesses** looking for a simple yet effective solution for tracking income and expenses without complex accounting software.
-
-The vision is to simplify financial management by providing a **powerful, user-friendly, and scalable solution** for tracking and optimizing finances.
-
----
-
 ## **Key Features**
 
-### **1. Income & Expense Tracking**
-- Log income and expenses in an organized manner.
-- Categorize transactions (e.g., salary, rent, groceries, entertainment).
-- Attach notes or receipts for better record-keeping.
+### **1. Expense & Income Tracking**
+- Categorize and record expenses and income with ease.
+- View real-time updates on financial transactions.
 
-### **2. Budgeting & Financial Planning**
-- Set monthly or custom budgets for different spending categories.
-- Receive alerts when approaching or exceeding budget limits.
-- Visualize budget breakdowns with interactive graphs.
+### **2. Budget Management**
+- Set spending limits across different categories.
+- Receive alerts when approaching budget limits.
 
 ### **3. Savings & Goal Tracking**
-- Set and monitor financial goals (e.g., vacation savings, emergency funds).
-- Track progress in real time with percentage completion indicators.
-- Automated savings recommendations based on spending habits.
+- Monitor financial goals (e.g., vacation savings, emergency funds).
+- Get automated saving recommendations based on spending habits.
 
 ### **4. Financial Reports & Insights**
-- View detailed analytics on spending trends and income growth.
-- Generate **CSV, PDF, or JSON** financial reports.
-- Track financial performance over weekly, monthly, and yearly periods.
+- Analyze spending trends with detailed reports.
+- Export reports in **CSV, PDF, or JSON** format.
 
 ### **5. User Authentication & Security**
 - Secure account creation with authentication mechanisms.
-- Optional two-factor authentication (2FA) for enhanced security.
-- Encrypted storage of financial data for privacy protection.
+- Two-factor authentication (2FA) for enhanced security.
 
 ### **6. Multi-User & Role-Based Access (For Businesses)**
 - Business users can create sub-accounts for employees.
-- Define role-based permissions (e.g., accountants with view-only access).
-- Track team or departmental expenses separately.
+- Track departmental expenses separately.
 
 ### **7. Cross-Platform Accessibility**
-- Available on both desktop and mobile devices.
-- Cloud synchronization ensures data consistency across multiple devices.
+- Available on both **desktop and mobile devices**.
 - Progressive Web App (PWA) support for a seamless experience.
 
 ---
 
 ## **Development Methodology**
+FinanceFlow follows **Agile development principles** and uses **Kanban methodology**:
 
-FinanceFlow follows **Agile development principles** and uses **Kanban methodology** to ensure efficient collaboration and continuous improvement.
-
-- **Kanban Board:** Tasks are managed using a structured workflow (To-Do, In Progress, Done).
+- **Kanban Board:** Tasks are managed in a structured workflow (To-Do, In Progress, Done).
 - **Iterative Development:** Features are continuously improved based on feedback.
-- **Task Prioritization:** Critical financial tracking features are developed first.
+- **Task Prioritization:** Financial tracking features are developed based on importance.
 
 ---
 
-## **Contribution & Best Practices**
+## **Version Control Strategy: GitFlow**
 
-### **Project Workflow**
+We follow the **GitFlow workflow**, which provides a structured branching strategy for feature development, releases, and hotfixes.
 
-FinanceFlow follows a structured development workflow:
-1. **Fork the repository** and create a feature branch.
-2. **Implement the feature or fix**, ensuring code follows best practices.
-3. **Commit changes using Conventional Commits**.
-4. **Push the branch and open a pull request (PR)** for code review.
-5. **After approval, the feature is merged into the main branch**.
+### **GitFlow Branch Structure**
 
-### **Conventional Commits Guide**
-To maintain a clear and structured commit history, we use **Conventional Commits**:
+- **`main` branch** → Contains stable production-ready code.
+- **`develop` branch** → Active development happens here.
+- **Feature branches** (`feature/feature-name`) → Used for new features.
+- **Release branches** (`release/version-number`) → Used to prepare for a new release.
+- **Hotfix branches** (`hotfix/fix-name`) → Used for urgent bug fixes in production.
 
+### **GitFlow Workflow Example**
+
+1️⃣ **Cloning the repository & setting up branches**
+```sh
+# Clone the repository
+git clone https://github.com/Omid2831/FinanceFlow.git
+cd FinanceFlow
+
+# Set up main and develop branches
+git checkout main
+git checkout -b develop
 ```
-<type>(<scope>): <message>
+
+2️⃣ **Starting a new feature**
+```sh
+# Create a new feature branch
+git checkout -b feature/user-authentication
+
+# Work on the feature, commit changes
+git add .
+git commit -m "feat: add user authentication module"
+
+# Merge the feature branch back to develop
+git checkout develop
+git merge feature/user-authentication
 ```
 
-#### **Common Commit Types:**
-- **feat**: Adding a new feature.
-  - Example: `feat(budget): add monthly budget tracker`
-- **fix**: Fixing a bug.
-  - Example: `fix(auth): resolve login issue on mobile`
-- **chore**: Maintenance tasks like dependencies update.
-  - Example: `chore(deps): update database driver`
-- **docs**: Updating documentation.
-  - Example: `docs(README): update installation guide`
+3️⃣ **Creating a release branch**
+```sh
+# Create a release branch
+git checkout -b release/v1.0.0
+
+# Perform final tests, bug fixes, and optimizations
+git commit -m "fix: resolve minor UI issues"
+
+# Merge into main and tag the release
+git checkout main
+git merge release/v1.0.0
+git tag -a v1.0.0 -m "FinanceFlow v1.0.0 release"
+```
+
+4️⃣ **Handling hotfixes**
+```sh
+# Create a hotfix branch for an urgent bug
+git checkout -b hotfix/fix-login-bug
+
+# Fix the issue, commit, and merge into main
+git commit -m "fix: resolve login issue"
+git checkout main
+git merge hotfix/fix-login-bug
+
+# Merge the fix into develop as well
+git checkout develop
+git merge main
+```
+
+This ensures a **clean, structured** workflow for development and releases. 🚀
+
+---
+
+## **Prerequisites**
+
+### **Frontend**
+✅ **React.js** – Core framework for building the UI  
+✅ **HTML, CSS, JavaScript** – Essential web technologies  
+✅ **Tailwind CSS or Bootstrap** – For styling  
+✅ **Redux or Context API** – For state management  
+
+### **Backend (Choose one)**
+1️⃣ **Python (Django or Flask)** – Easy-to-use with built-in ORM  
+2️⃣ **Java (Spring Boot)** – Scalable for large applications  
+3️⃣ **PHP (Laravel)** – MVC structure with great built-in tools  
+
+### **Database**
+✅ **SQL (PostgreSQL or MySQL)** – Structured, relational database  
+✅ **SQLite** *(for development/testing)* – Lightweight and easy to set up  
+
+### **Other Requirements**
+✅ **Git & GitHub** – Version control for collaboration  
+✅ **Node.js (for frontend tools only)** – Required for package management (npm, yarn)  
+✅ **REST API Development** – For communication between frontend and backend  
+✅ **JWT or OAuth** – For authentication & security  
+✅ **Kanban & Agile Methodology** – For project management (Trello, GitHub Projects)  
+
+---
+
+## **Conventional Commits**
+We use **Conventional Commits** for clear and consistent commit messages.
+
+### **Commit Message Format:**
+```sh
+type(scope): message
+```
+
+### **Common Types:**
+- `feat:` – New feature (e.g., `feat: add budget tracking`)
+- `fix:` – Bug fix (e.g., `fix: resolve login issue`)
+- `refactor:` – Code refactoring (e.g., `refactor: optimize API calls`)
+- `docs:` – Documentation updates (e.g., `docs: update README`)
+- `style:` – UI/design improvements (e.g., `style: enhance button UI`)
+- `test:` – Adding or updating tests (e.g., `test: add unit test for auth`)
+- `chore:` – Maintenance tasks (e.g., `chore: update dependencies`)
+
+Example commit:
+```sh
+git commit -m "feat(auth): add JWT authentication support"
+```
+This keeps commit history **clean and meaningful**! 🚀
 
 ---
 
 ## **How to Use FinanceFlow**
 
-### **1. Dashboard Overview**
-- The **dashboard** provides a summary of total income, total expenses, and recent transactions.
-- Users can filter financial data by **daily, weekly, or monthly views**.
-
-### **2. Adding Transactions**
-- Navigate to the **Transactions** tab and click “Add Transaction.”
-- Select a **category**, enter an **amount**, and add optional **notes**.
-- Click **Save**, and the transaction will be logged.
-
-**Example Transaction Entry:**
-```json
-{
-  "date": "2025-03-16",
-  "category": "Groceries",
-  "amount": 50.00,
-  "description": "Weekly grocery shopping"
-}
+1️⃣ **Clone the repository**
+```sh
+git clone https://github.com/Omid2831/FinanceFlow.git
+cd FinanceFlow
 ```
 
-### **3. Budgeting & Financial Goals**
-- Set **monthly spending limits** and track usage.
-- Create **financial goals** (e.g., "Save $500 for a trip") and monitor progress.
-
-**Example Budget Alert:**
-```json
-{
-  "budget_category": "Dining Out",
-  "limit": 200,
-  "spent": 180,
-  "remaining": 20,
-  "alert": "You are close to exceeding your budget for this category!"
-}
+2️⃣ **Install dependencies** (for frontend)
+```sh
+npm install  # or yarn install
 ```
 
-### **4. Generating Financial Reports**
-- Users can generate reports in **CSV, PDF, or JSON**.
-- The report includes a detailed breakdown of **income, expenses, and savings trends**.
+3️⃣ **Start the development server**
+```sh
+npm start  # or yarn start
+```
 
----
+4️⃣ **Set up the backend** (Django, Spring Boot, or Laravel depending on choice)
+```sh
+# Example for Django backend
+pip install -r requirements.txt
+python manage.py runserver
+```
 
-## **Installation & Setup**
-
-### **Prerequisites**
-- Install dependencies for both backend and frontend.
-- Set up a database for storing user transactions and financial data.
-
-### **Setup Instructions**
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Omid2831/FinanceFlow.git
-   cd FinanceFlow
-   ```
-
-2. **Backend Setup**
-   - Install dependencies for the backend.
-   - Configure the environment variables (`.env` file) for database connection.
-   - Run database migrations if needed.
-   - Start the backend server.
-
-3. **Frontend Setup**
-   - Navigate to the frontend directory and install dependencies.
-   - Start the frontend development server.
+5️⃣ **Enjoy FinanceFlow! 🚀**
 
 ---
 
 ## **Project Author**
+**Developed by:** Omid2831  
+GitHub: [@Omid2831](https://github.com/Omid2831)
 
-**Created by:** Omid  
-**GitHub:** [Omid2831](https://github.com/Omid2831)
-
-🚀 Let's build FinanceFlow together!

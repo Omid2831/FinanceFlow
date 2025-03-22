@@ -1,7 +1,3 @@
-Here's the updated script with Flask for the backend and ReactJS for the frontend, along with a project structure map:
-
----
-
 ## **FinanceFlow**
 
 ### **Overview**

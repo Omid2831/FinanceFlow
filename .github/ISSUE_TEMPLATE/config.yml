@@ -3,14 +3,3 @@ contact_links:
   - name: General Question
     url: https://github.com/Omid2831/FinanceFlow/discussions
     about: Ask a general question about the project.
-
-custom_templates:
-  md:
-    issue_template: |
-      # Issue Title
-      ## Description
-      Please describe the issue you are experiencing.
-    pull_request_template: |
-      # Pull Request Title
-      ## Description
-      Please describe the changes you made.

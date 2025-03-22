@@ -17,3 +17,4 @@ issue_templates:
     labels: ["suggestion"]
     assignees: []
     template: suggestion.md
+    

@@ -1,7 +1,3 @@
-Here's the updated script with Flask for the backend and ReactJS for the frontend, along with a project structure map:
-
----
-
 ## **FinanceFlow**
 
 ### **Overview**
@@ -210,6 +206,7 @@ GitHub: [@Omid2831](https://github.com/Omid2831)
 ---
 
 ## **Project Structure Map**
+## We will discuss this as we progress in the project, so the structure will remain updated
 
 Here’s a basic map of the project structure:
 

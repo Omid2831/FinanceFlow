@@ -1,5 +1,5 @@
 ---
-name: Suggestion
+name: "\U0001F6E0️Suggestion"
 about: This template is designed for collecting feedback and enhancement suggestions
   to improve the project.
 title: "[ Suggest ]:"

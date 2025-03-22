@@ -1,43 +1,49 @@
-# FinanceFlow
+Here's the updated script with Flask for the backend and ReactJS for the frontend, along with a project structure map:
 
-## Overview
+---
+
+## **FinanceFlow**
+
+### **Overview**
 FinanceFlow is a **comprehensive personal finance management platform** designed to help users **track income, expenses, savings, and financial goals**. It provides an intuitive interface to manage finances, analyze spending patterns, and make informed financial decisions.
 
 The platform allows users to **log transactions, categorize expenses, set budgets, track savings goals, and generate financial reports**. FinanceFlow ensures a seamless user experience by prioritizing **security, efficiency, and scalability** while keeping financial data organized and accessible across devices.
 
-## **Key Features**
+---
 
-### **1. Expense & Income Tracking**
+### **Key Features**
+
+#### **1. Expense & Income Tracking**
 - Categorize and record expenses and income with ease.
 - View real-time updates on financial transactions.
 
-### **2. Budget Management**
+#### **2. Budget Management**
 - Set spending limits across different categories.
 - Receive alerts when approaching budget limits.
 
-### **3. Savings & Goal Tracking**
+#### **3. Savings & Goal Tracking**
 - Monitor financial goals (e.g., vacation savings, emergency funds).
 - Get automated saving recommendations based on spending habits.
 
-### **4. Financial Reports & Insights**
+#### **4. Financial Reports & Insights**
 - Analyze spending trends with detailed reports.
 - Export reports in **CSV, PDF, or JSON** format.
 
-### **5. User Authentication & Security**
+#### **5. User Authentication & Security**
 - Secure account creation with authentication mechanisms.
 - Two-factor authentication (2FA) for enhanced security.
 
-### **6. Multi-User & Role-Based Access (For Businesses)**
+#### **6. Multi-User & Role-Based Access (For Businesses)**
 - Business users can create sub-accounts for employees.
 - Track departmental expenses separately.
 
-### **7. Cross-Platform Accessibility**
+#### **7. Cross-Platform Accessibility**
 - Available on both **desktop and mobile devices**.
 - Progressive Web App (PWA) support for a seamless experience.
 
 ---
 
-## **Development Methodology**
+### **Development Methodology**
 FinanceFlow follows **Agile development principles** and uses **Kanban methodology**:
 
 - **Kanban Board:** Tasks are managed in a structured workflow (To-Do, In Progress, Done).
@@ -46,11 +52,11 @@ FinanceFlow follows **Agile development principles** and uses **Kanban methodolo
 
 ---
 
-## **Version Control Strategy: GitFlow**
+### **Version Control Strategy: GitFlow**
 
 We follow the **GitFlow workflow**, which provides a structured branching strategy for feature development, releases, and hotfixes.
 
-### **GitFlow Branch Structure**
+#### **GitFlow Branch Structure**
 
 - **`main` branch** → Contains stable production-ready code.
 - **`develop` branch** → Active development happens here.
@@ -58,7 +64,7 @@ We follow the **GitFlow workflow**, which provides a structured branching strate
 - **Release branches** (`release/version-number`) → Used to prepare for a new release.
 - **Hotfix branches** (`hotfix/fix-name`) → Used for urgent bug fixes in production.
 
-### **GitFlow Workflow Example**
+#### **GitFlow Workflow Example**
 
 1️⃣ **Cloning the repository & setting up branches**
 ```sh
@@ -118,41 +124,40 @@ This ensures a **clean, structured** workflow for development and releases. 🚀
 
 ---
 
-## **Prerequisites**
+### **Prerequisites**
 
-### **Frontend**
+#### **Frontend**
 ✅ **React.js** – Core framework for building the UI  
 ✅ **HTML, CSS, JavaScript** – Essential web technologies  
 ✅ **Tailwind CSS or Bootstrap** – For styling  
 ✅ **Redux or Context API** – For state management  
 
-### **Backend (Choose one)**
-1️⃣ **Python (Django or Flask)** – Easy-to-use with built-in ORM  
-2️⃣ **Java (Spring Boot)** – Scalable for large applications  
-3️⃣ **PHP (Laravel)** – MVC structure with great built-in tools  
+#### **Backend**
+✅ **Python (Flask)** – Lightweight and easy-to-use web framework  
+✅ **Flask Extensions** – (e.g., Flask-SQLAlchemy for ORM, Flask-JWT-Extended for JWT authentication)  
 
-### **Database**
+#### **Database**
 ✅ **SQL (PostgreSQL or MySQL)** – Structured, relational database  
 ✅ **SQLite** *(for development/testing)* – Lightweight and easy to set up  
 
-### **Other Requirements**
+#### **Other Requirements**
 ✅ **Git & GitHub** – Version control for collaboration  
 ✅ **Node.js (for frontend tools only)** – Required for package management (npm, yarn)  
 ✅ **REST API Development** – For communication between frontend and backend  
 ✅ **JWT or OAuth** – For authentication & security  
-✅ **Kanban & Agile Methodology** – For project management (Trello, GitHub Projects)  
+✅ **Kanban & Agile Methodology** – For project management (Trello, GitHub Projects)
 
 ---
 
-## **Conventional Commits**
+### **Conventional Commits**
 We use **Conventional Commits** for clear and consistent commit messages.
 
-### **Commit Message Format:**
+#### **Commit Message Format:**
 ```sh
 type(scope): message
 ```
 
-### **Common Types:**
+#### **Common Types:**
 - `feat:` – New feature (e.g., `feat: add budget tracking`)
 - `fix:` – Bug fix (e.g., `fix: resolve login issue`)
 - `refactor:` – Code refactoring (e.g., `refactor: optimize API calls`)
@@ -169,7 +174,7 @@ This keeps commit history **clean and meaningful**! 🚀
 
 ---
 
-## **How to Use FinanceFlow**
+### **How to Use FinanceFlow**
 
 1️⃣ **Clone the repository**
 ```sh
@@ -187,18 +192,50 @@ npm install  # or yarn install
 npm start  # or yarn start
 ```
 
-4️⃣ **Set up the backend** (Django, Spring Boot, or Laravel depending on choice)
+4️⃣ **Set up the backend** (Flask)
 ```sh
-# Example for Django backend
+# Example for Flask backend
 pip install -r requirements.txt
-python manage.py runserver
+python app.py  # Or use flask run
 ```
 
 5️⃣ **Enjoy FinanceFlow! 🚀**
 
 ---
 
-## **Project Author**
+### **Project Author**
 **Developed by:** Omid2831  
 GitHub: [@Omid2831](https://github.com/Omid2831)
 
+---
+
+## **Project Structure Map**
+
+Here’s a basic map of the project structure:
+
+```
+FinanceFlow/
+├── backend/                    # Flask backend
+│   ├── app.py                   # Main entry point for Flask app
+│   ├── config.py                # Configuration settings
+│   ├── models/                  # Database models (e.g., User, Transaction)
+│   ├── routes/                  # API endpoints (e.g., user routes, transaction routes)
+│   ├── services/                # Business logic (e.g., transaction processing)
+│   ├── requirements.txt         # Python dependencies (Flask, Flask-SQLAlchemy, etc.)
+│   └── migrations/              # Database migration files (Flask-Migrate)
+├── frontend/                   # React frontend
+│   ├── public/                  # Public assets (index.html, etc.)
+│   ├── src/                     # React source files
+│   │   ├── components/          # Reusable UI components (Button, Header, etc.)
+│   │   ├── pages/               # React pages (Dashboard, Login, etc.)
+│   │   ├── services/            # API calls and business logic for frontend
+│   │   ├── App.js               # Main React app component
+│   │   ├── index.js             # Entry point for React app
+│   │   ├── styles/              # Global CSS (Tailwind, custom CSS, etc.)
+│   │   └── redux/               # State management (Redux or Context API)
+├── .gitignore                   # Git ignore file
+├── README.md                    # Project documentation
+└── package.json                 # Frontend dependencies and scripts (npm, yarn)
+```
+
+This structure should give you a solid base to build FinanceFlow!

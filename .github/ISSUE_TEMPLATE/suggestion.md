@@ -1,4 +1,14 @@
-name: Feature Suggestion
+---
+name: Suggestion
+about: This template is designed for submitting feature suggestions or improvements
+  for a project
+title: "[ Suggest ]:"
+labels: enhancement, help wanted
+assignees: ''
+
+---
+
+name: Suggestion
 description: Propose a new feature or improvement.
 title: "[Suggestion]: "
 labels: ["enhancement", "discussion"]

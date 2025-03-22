@@ -223,7 +223,7 @@ FinanceFlow/
 │   ├── services/                # Business logic (e.g., transaction processing)
 │   ├── requirements.txt         # Python dependencies (Flask, Flask-SQLAlchemy, etc.)
 │   └── migrations/              # Database migration files (Flask-Migrate)
-├── frontend/                   # React frontend
+├── frontend/                    # React frontend
 │   ├── public/                  # Public assets (index.html, etc.)
 │   ├── src/                     # React source files
 │   │   ├── components/          # Reusable UI components (Button, Header, etc.)

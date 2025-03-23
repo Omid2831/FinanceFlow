@@ -203,35 +203,5 @@ python app.py  # Or use flask run
 **Developed by:** Omid2831  
 GitHub: [@Omid2831](https://github.com/Omid2831)
 
----
 
-## **Project Structure Map**
-## We will discuss this as we progress in the project, so the structure will remain updated
-
-Here’s a basic map of the project structure:
-
-```
-FinanceFlow/
-├── backend/                    # Flask backend
-│   ├── app.py                   # Main entry point for Flask app
-│   ├── config.py                # Configuration settings
-│   ├── models/                  # Database models (e.g., User, Transaction)
-│   ├── routes/                  # API endpoints (e.g., user routes, transaction routes)
-│   ├── services/                # Business logic (e.g., transaction processing)
-│   ├── requirements.txt         # Python dependencies (Flask, Flask-SQLAlchemy, etc.)
-│   └── migrations/              # Database migration files (Flask-Migrate)
-├── frontend/                    # React frontend
-│   ├── public/                  # Public assets (index.html, etc.)
-│   ├── src/                     # React source files
-│   │   ├── components/          # Reusable UI components (Button, Header, etc.)
-│   │   ├── pages/               # React pages (Dashboard, Login, etc.)
-│   │   ├── services/            # API calls and business logic for frontend
-│   │   ├── App.js               # Main React app component
-│   │   ├── index.js             # Entry point for React app
-│   │   ├── styles/              # Global CSS (Tailwind, custom CSS, etc.)
-│   │   └── redux/               # State management (Redux or Context API)
-├── .gitignore                   # Git ignore file
-├── README.md                    # Project documentation
-└── package.json                 # Frontend dependencies and scripts (npm, yarn)
-```
 
